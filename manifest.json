@@ -1,6 +1,6 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "Anna's Extension",
+  "description": "An Extension to minimize online gambling use!",
   "version": "1.0",
   "manifest_version": 3,
   "background": {

@@ -1,4 +1,4 @@
-// Initialize butotn with users's prefered color
+// Initialize button with users's prefered color
 let changeColor = document.getElementById("changeColor");
 
 chrome.storage.sync.get("color", ({ color }) => {
@@ -21,4 +21,27 @@ function setPageBackgroundColor() {
   chrome.storage.sync.get("color", ({ color }) => {
     document.body.style.backgroundColor = color;
   });
+}
+function factorialize(num){
+  var result = num;
+  if(num == 0|| num ==1){
+    return 1; 
+  }
+  while (num > 1){
+    num--; 
+    result *= num; 
+  }
+  return (result); 
+}
+
+function oddsOfWinning(n,k){
+  var nFactor = factorialize(n);
+  var kFactor = factorialize(k); 
+  var nMinusK = factorialize(n-k); 
+  if (n >=k){
+    var odds = nFactor/(kFactor * nMinusK); 
+    odds = Math.floor(odds);
+    odds = odds.toLocaleString(); 
+  }
+  console.log("Your odds of winning are 1 in " + odds); 
 }

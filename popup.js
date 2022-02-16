@@ -45,3 +45,4 @@ function oddsOfWinning(n,k){
   }
   console.log("Your odds of winning are 1 in " + odds); 
 }
+
